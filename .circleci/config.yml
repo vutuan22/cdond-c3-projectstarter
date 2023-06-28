@@ -36,8 +36,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm i --prefix backend
-      - run: npm run lint --prefix backend
+      - run: cd backend
+      - run: npm intall
+      - run: npm run build
       # - persist_to_workspace:
       #     root: ~/
       #     paths:
@@ -48,8 +49,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm i --prefix frontend
-      - run: npm run lint --prefix frontend
+      - run: cd backend
+      - run: npm intall
+      - run: npm run build
       # - persist_to_workspace:
       #     root: ~/
       #     paths:
