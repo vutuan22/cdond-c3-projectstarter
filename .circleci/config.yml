@@ -38,10 +38,10 @@ jobs:
       - checkout
       - run: npm i --prefix backend
       - run: npm run lint --prefix backend
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project/backend/node_modules
+      # - persist_to_workspace:
+      #     root: ~/
+      #     paths:
+      #       - project/backend/node_modules
 
   build-frontend:
     docker:
@@ -50,10 +50,10 @@ jobs:
       - checkout
       - run: npm i --prefix frontend
       - run: npm run lint --prefix frontend
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project/frontend/node_modules
+      # - persist_to_workspace:
+      #     root: ~/
+      #     paths:
+      #       - project/frontend/node_modules
 
   test-backend:
     docker:
